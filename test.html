@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Test</title>
+
+
+</head>
+
+<body class="w3-container w3-auto">
+    <h1>Welcome</h1>
+    <div class="w3-row" style="width: 50%;">
+        <div class="w3-col" style="width:20%">
+            <input id="start" class="w3-input w3-border" type="text" placeholder="Start">
+        </div>
+        <div class="w3-col w3-center" style="width:10%">
+            <p>to</p>
+        </div>
+        <div class="w3-col" style="width:20%">
+            <input class="w3-input w3-border" type="text" placeholder="Stop">
+        </div>
+    </div>
+
+    <button onclick="handleClick()" class="w3-button w3-red">Run</button>
+    <br><br>
+    <button type="button" disabled class="w3-button w3-blue" id='download' onclick="handleDownload()">Download</button>
+    <script>
+        let link = 'test';
+
+        function handleClick() {
+            console.log(document.getElementById('start').value);
+            document.getElementById("download").disabled = false;
+            link = 'done';
+        }
+
+        function handleDownload() {
+            console.log(link);
+        }
+    </script>
+</body>
+
+</html>
