@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+   
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Unique Code</title>
+    
 </head>
 <body>
-    <div><h1>1234</h1></div>
-    
+    <div><h1 id="code">1234</h1></div>
+    <script>
+        const diction = "1234568abcdefghijkmnqrstuvwxyz";
+        let result = "";
+        for(i=0;i<5;i++){
+            //Math.floor(Math.random() * (max - min + 1)) + min;
+            const x = Math.floor(Math.random() * diction.length);
+            result += diction[x];
+        }
+        document.getElementById("code").innerHTML = result;
+    </script>
 </body>
 </html>
